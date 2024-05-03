@@ -1,0 +1,35 @@
+Investigar caso de uso real de un autómata finito cuál es su aplicación e implementación del mismo.
+
+Introducción:
+
+Autómatas finitos, también conocidos como máquinas de estado finito, son modelos computacionales que realizan cálculos automáticamente sobre una entrada para producir una salida. Un caso de uso real de los autómatas finitos es en el reconocimiento de lenguajes regulares, que son los lenguajes formales más simples según la Jerarquía de Chomsky.
+
+Aplicación de un Autómata Finito:
+Una aplicación práctica de los autómatas finitos es en el diseño de analizadores léxicos para compiladores de lenguajes de programación. Los analizadores léxicos utilizan autómatas finitos para reconocer patrones en el código fuente, como identificadores, palabras clave, números y operadores. Esto permite que el compilador procese el código fuente de manera más eficiente y precisa.
+La implementación de un autómata finito para este caso de uso se realiza mediante una tabla de transiciones que define las reglas para el reconocimiento de patrones. Cada fila de la tabla representa un estado del autómata, y cada columna representa un símbolo de entrada. La celda en la intersección de una fila y una columna contiene el siguiente estado del autómata si se lee el símbolo correspondiente en el estado actual.
+Por ejemplo, supongamos que queremos reconocer números enteros en un lenguaje de programación. El autómata finito podría tener los siguientes estados:
+Estado inicial: esperando el primer dígito
+Estado 1: esperando el siguiente dígito
+Estado 2: esperando un signo más o menos
+Estado 3: esperando el siguiente dígito después del signo
+Estado final: número entero reconocido
+La tabla de transiciones podría tener las siguientes reglas:
+Si se lee un dígito en el estado inicial, se pasa al estado 1.
+Si se lee un dígito en el estado 1, se permanece en el estado 1.
+Si se lee un signo más o menos en el estado 1, se pasa al estado 2.
+Si se lee un dígito en el estado 2, se pasa al estado 3.
+Si se lee un dígito en el estado 3, se permanece en el estado 3.
+Si se lee cualquier otro símbolo en cualquier estado, se regresa al estado inicial.
+Cuando se lee el último dígito del número entero, el autómata finito se encuentra en el estado final y se genera el token correspondiente.
+
+Otra aplicación de los autómatas finitos es en el procesamiento de texto, donde se utilizan para buscar y reemplazar patrones en un documento. Por ejemplo, el comando "grep" en Unix utiliza un autómata finito para buscar una cadena de caracteres en un archivo de texto.
+Implementación de un Autómata Finito:
+La implementación de un autómata finito puede realizarse mediante una tabla de transición de estados, que muestra todas las posibles transiciones entre estados para cada entrada posible. También se pueden implementar mediante diagramas de estados, que representan visualmente los estados y las transiciones entre ellos.
+
+Conclusión:
+En resumen, los autómatas finitos son una herramienta útil en el procesamiento de lenguajes y textos, y se utilizan en una variedad de aplicaciones, desde el diseño de compiladores hasta la búsqueda y reemplazo de texto.
+
+Referencias:
+Hopcroft, J. E., Motwani, R., & Ullman, J. D. (2001). Introduction to automata theory, languages, and computation. Addison-Wesley.
+Lewis, H. R., & Papadimitriou, C. H. (1998). Elements of the theory of computation. Prentice Hall.
+Sipser, M. (2013). Introduction to the theory of computation. Cengage Learning.
